@@ -1,0 +1,21 @@
+
+//what is a module
+What is a module?
+If you are a more advanced user feel free to skip this
+section, however, if you don't really know what a
+module is stick around.
+  A module is generally understood as code that is stored in
+ separate files which has a single functionality.
+ You can then import this code and reuse it throughout a program.
+ A library is a set of modules that share a common theme. In native
+ Java Script, modules are not a prepackaged feature.
+ The Node JS API documentation, which you can and should reference,
+ can be a little overwhelming for someone who is brand new to programming
+in Java Script.
+  https://nodejs.org/api/modules.html#modules_the_module_object
+//understand how require works
+Just understand that you must first download a library and
+then require('the library') you want to use. D3 is a library,
+but it includes
+//install d3
+npm install d3
