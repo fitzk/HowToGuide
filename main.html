@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <script src="d3.v3.min.js" type="text/javascript"></script>
-  <script src="script.js"></script>
-</head>
-<body>
-    <div id="viz"></div>
 
+<head>
+  <title>Home</title>
+  <script src="CodeMirror/lib/codemirror.js"></script>
+<link rel="stylesheet" href="CodeMirror/lib/codemirror.css">
+<script src="CodeMirror/mode/javascript/javascript.js"></script>
+
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="allStyle.css"/>
+  </head>
+
+<aside>
+<ul>
+  <li><a href="main.html">Home</a></li>
+  <li><a href="start.html">Getting Started</a></li>
+  <li><a href="svg.html">SVG</a></li>
+  <li><a href="scales.html">Scales</a></li>
+</ul>
+</aside>
+<body>
+
+
+<section>
+
+<header>D3</header>
+<p>D3 (data driven documents), is a JavaScript library that can be used with HTML and SVG to create data driven, dynamic
+graphics on webpages. It is a very powerful set of tools, and  the library incooporates a diverse set of modules. 
+The point of D3, is to create data visualizations, and the D3 library has tools to create almost any graphic you could think of. 
+Many amazing examples are accessable and a lot of users prefer to just plug their own data into something that has already been
+created by someone else. When learning D3, there are several conceptual roadblocks the novice user may encounter, depending on their level of experience
+ with JavaScript and the browser. This How-To-Guide is meant to help someone with little knowledge of JavaScript programming
+practices and SVG understand how the basics of how D3 works. There will also be an example of importing outside data into some
+ of the examples other users have created using D3.  </p>
+<script>
+require([
+  "/lib/codemirror", "/mode/htmlmixed/htmlmixed"
+], function(CodeMirror) {
+  CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true,
+    mode: "htmlmixed"
+  });
+});
+</script>
+ <code id = "code"></code>
+</section>
 </body>
+
 </html>

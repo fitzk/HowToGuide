@@ -1,0 +1,44 @@
+aside {
+	float: right;
+	width: 300px;
+	background: #FFAD5C;
+}	
+
+
+section {
+  width: 600px;
+  margin: 0 auto;
+  padding: 0 auto;
+  background: #FFAD5C;
+
+}
+
+body {
+	background: #A3C2C2;
+}
+
+p {
+	margin-left: auto;
+    margin-right: auto;
+    width: 35em;
+	padding: 10px;
+	font-family: Arial, Sans-serif;
+
+
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header{
+	font-size: 40px;
+	font-style: bold;
+	font-family: Arial, Sans-serif;
+}
