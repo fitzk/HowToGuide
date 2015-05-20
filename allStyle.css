@@ -6,11 +6,15 @@ aside {
 
 
 section {
-  width: 600px;
+  width: 650px;
   margin: 0 auto;
   padding: 0 auto;
   background: #FFAD5C;
 
+}
+
+.outerDiv{
+	padding: 20px;
 }
 
 body {
