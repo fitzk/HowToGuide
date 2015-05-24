@@ -1,16 +1,15 @@
 aside {
 	float: right;
 	width: 300px;
-	background: #FFAD5C;
+	background: #A3C2C2;
 }	
 
-
 section {
-  width: 650px;
+  width: 700px;
   margin: 0 auto;
   padding: 0 auto;
-  background: #FFAD5C;
-
+  background: white;
+  border-radius: 10px;
 }
 
 .outerDiv{
@@ -18,22 +17,57 @@ section {
 }
 
 body {
-	background: #A3C2C2;
+	background: #CCFFFF;
 }
 
 p {
+	background: #A3C2C2;
+	border-radius: 5px;
+	background: white;
+	margin-left: auto;
+    margin-right: auto;
+    width: 35em;
+	padding: 10px;
+	font-family: Arial, Sans-serif;
+}
+
+ul {
+
+	 display: block;
+	border-radius: 5px;
+	background: white;
 	margin-left: auto;
     margin-right: auto;
     width: 35em;
 	padding: 10px;
 	font-family: Arial, Sans-serif;
 
-
 }
+
 img {
+	padding: 0 auto;
     display: block;
     margin-left: auto;
     margin-right: auto; 
+
+}
+#pinkCircle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+	height: 180px;
+	width:365px;
+	background: white;
+
+}
+#greenPath{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+	height: 250px;
+	width:250px;
+	background: white;
+
 
 }
 ul {
@@ -42,7 +76,37 @@ ul {
     padding: 0;
 }
 header{
-	font-size: 40px;
+	color:#FA6C41;
+	padding: 10px;
+	font-size: 50px;
 	font-style: bold;
 	font-family: Arial, Sans-serif;
 }
+
+h1 {
+	padding: 10px;
+	font-size: 20px;
+	font-style: bold;
+	font-family: Arial, Sans-serif;
+
+}
+h2 {
+	padding: 10px;
+	font-size: 30px;
+	font-style: bold;
+	font-family: Arial, Sans-serif;
+
+}
+  path {
+    stroke: purple;
+    stroke-width: 3;
+    fill: none;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }

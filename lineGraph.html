@@ -32,11 +32,13 @@
       </ul>
     </aside>
     <section>
-      <header>Data Binding</header>
-      <p> D3 binds data with DOM elements and will update your page based on changing data. This is possible by using D3's Selection and Data modules. 
-	 
-	  
-	</p>
+      <header>Creating a Line Graph with JSON Data</header>
+      <p>This example will explain how to use D3&#39;s request methods to retrieve asynchronis data and then create a line graph.
+      The data will come from Githubs API and will consist of the number of commits by all users in the last 52 weeks on a specific
+      library. Some of the code for the line graph was sourced from 
+      <a href="http://www.d3noob.org/2012/12/starting-with-basic-d3-line-graph.html">d3noob.org</a>, but modified for this example.
+      I highly encourage you to take a look at the original graph and the other tutorials on 
+      <a href="http://www.d3noob.org/2012/12/starting-with-basic-d3-line-graph.html">d3noob</a>.</p>
       <h1>Getting Data</h1>
       <p>Data can be sorced locally or you can retrieve it from an external website by making an ()request. D3 works with many data
       formats and has built in request methods to specifically retrieve certain formats. The data that we will be using in this

@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title>Getting Started</title>
+	<link rel="stylesheet" type="text/css" href="https://codemirror.net/theme/solarized.css" />
+    <link rel="stylesheet" href="CodeMirror/lib/codemirror.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.17/require.min.js"></script>
+    <script src="startScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="allStyle.css" />
 
-<head>
-  <title>Getting Started</title>
-<script src="script.js"></script>
-<link rel="stylesheet" type="text/css" href="allStyle.css"/>
   </head>
+  <body>
+    <aside>
+      <ul>
+        <li>
+          <a href="main.html">Home</a>
+        </li>
+        <li>
+          <a href="start.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="svg.html">SVG</a>
+        </li>
+        <li>
+          <a href="dataBinding.html">Data Binding</a>
+        </li>
+        <li>
+          <a href="lineGraph.html">Line Graph</a>
+        </li>
+      </ul>
+    </aside>
+    <section>
+      <header>Getting Started</header>
+      <p>The following HTML page is all you need to start playing around with the D3 library! The script tag is where you will add
+      your JavaScript code. You can always store your JavaScript in a separate file. Note that the D3 library is included directly
+      from the d3js.org website. When using JavaScript libraries you can either download the library and keep a copy in your local
+      file system or just reference the file on the website directly like it is shown below.</p>
+      <div class="outerDiv">
+        <textarea rows="4" cols="50" id="start0">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;body&gt;
+		&lt;script src=&quot;http://d3js.org/d3.v3.min.js&quot;&gt;&lt;/script&gt;
+		&lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
+		&lt;script&gt;
+				//Your D3 code goes here!
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
 
-<aside>
-<ul>
-  <li><a href="main.html">Home</a></li>
-  <li><a href="start.html">Getting Started</a></li>
-  <li><a href="svg.html">SVG</a></li>
-  <li><a href="scales.html">Scales</a></li>
-</ul>
-</aside>
-<body>
-
-
-<section>
-
-<header>Getting Started</header>
-<img name = "images" src= "startExamples/temp.png" style="width:450px; height:450px"/>
-<img name = "images" src= "startExamples/startAtom.png" style="width:450px; height:100px"/>
-<p></p>
-
-</section>
-</body>
-
+                      </textarea>
+      </div>
+      <p>This is important if you are very new to JavaScript. The next step in moving forward with D3 is to make sure you
+      understand how to use JavaScript modules. I recommend reading Chapter 10 of Eloquent JavaScript{add link}, in order to get up
+      to speed with this concept if it is unfarmiliar. Like most JavaScript libraries, D3 is used by creating objects from the
+      modules it contains.</p>
+	  
+	  <p> If you wish to keep your JavaScript in a separate file, simply include the source in your html page; i.e.</p> <p>&lt; script src="yourScript.js" >&lt; /script ></p> <p>However, note that it is important to place a script tag after any dependencies it might have. In this instance, make sure
+	  the script tag that references your local JavaScript file is included after the script tag that includes the D3 library.
+	  </p>
+    </section>
+  </body>
 </html>

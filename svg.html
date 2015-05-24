@@ -2,47 +2,121 @@
 <html>
 
 <head>
-  <title>Home</title>
-<script src="script.js"></script>
+  <title>SVG</title>
+<link rel="stylesheet" href="CodeMirror/lib/codemirror.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.17/require.min.js"></script>
+<script src="svgScript.js"></script>
 <link rel="stylesheet" type="text/css" href="allStyle.css"/>
+<link rel="stylesheet" type="text/css" href= "https://codemirror.net/theme/solarized.css"/>
   </head>
 
-<aside>
-<ul>
-  <li><a href="main.html">Home</a></li>
-  <li><a href="start.html">Getting Started</a></li>
-  <li><a href="svg.html">SVG</a></li>
-  <li><a href="scales.html">Scales</a></li>
-</ul>
-</aside>
+    <aside>
+      <ul>
+        <li>
+          <a href="main.html">Home</a>
+        </li>
+        <li>
+          <a href="start.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="svg.html">SVG</a>
+        </li>
+        <li>
+          <a href="dataBinding.html">Data Binding</a>
+        </li>
+        <li>
+          <a href="lineGraph.html">Line Graph</a>
+        </li>
+      </ul>
+    </aside>
 <body>
 
 
 	<section id= "svg">
 	  <header>SVG</header>
+
 	<p>SVG is a popular way to render scalable images for webpages.
 	There is a lot of documentation and examples online for how to 
 	create and manipulate SVG objects so I won't go into too much 
-	detail about them here. <br/>
-	- SVG is widly used within the D3 library to create custom images. 
-	<br/>- The SVG object can be created using html.
-	<br/>- SVG objects can also be rendered in JavaScript.
-	<br/>- This is very important for data binding, a concept we will
-	approach later.
-	<br/><br/> The following code is an example of how to create an SVG circle using 
-	html.</p>
-<img name = "images" src= "svgExamples/ex1circhtml.png" style="width:450px; height:100px"/>
-<p>The result...</p>
-<img name = "images" src= "svgExamples/ex1pinkcircle.png" style="width:200px; height:200px"/>
-<p>This code shows how to create a circle using JavaScript and D3.</p>
-<img name = "images" src= "svgExamples/ex1d3circCode.png" style="width:450px; height:400px"/>
-<p>Resulting image...</p>
-<img name = "images" src= "svgExamples/ex1circbyd3.png" style="width:280px; height:300px"/>
-<p>Svg:Path</p>
-<img name = "images" src= "svgExamples/ex2pathHtml.png" style="width:450px; height:100px"/>
-<img name = "images" src= "svgExamples/ex2pathD3web.png" style="width:200px; height:200px"/>
-<img name = "images" src= "svgExamples/ex2pathD3atom.png" style="width:350px; height:300px"/>
-<img name = "images" src= "svgExamples/ex2pathD3.png" style="width:300px; height:300px"/>
+	detail about them here. The following examples show an SVG object
+	and how it was created in both HTML and JavaScript/D3. Here, Svg 
+	objects are created using the Selection module in the D3 library,
+	which will be discussed in further detail in the next section. For now,
+	note the similarites in how HTML and JavaScript are used to render the
+	circle and the path svg object.<br/>
+
+	<br/><br/> This Pink Circle is an SVG:Circle object.</p>
+	<div id="pinkCircle">
+	<img name = "images" src= "svgExamples/ex1pinkcircle.png" style="width:180px; height:180px"/>
+	</div>
+<h2>HTML</h2>
+<div class="outerDiv"> 
+	<textarea rows="4" cols="50" id = "code0">
+	<svg height = "1000" width = "1000">
+      <circle cx = "100" cy="100" r = "50" fill="pink"></circle>
+	</svg> 
+	</textarea>
+ </div>
+ 
+<h2>JavaScript and D3</h2>
+<div class = "outerDiv"> 
+	<textarea rows="4" cols="40" id = "code1">
+	&#60script>
+		var circDemo = d3.select("body");
+		
+		circDemo
+			.append("svg")
+			.attr("height",1000)
+			.attr("width",1000)
+			.append("svg:circle")
+			.attr("cx",100)
+			.attr("cy",100)
+			.attr("r",50)
+			.attr("fill","pink");
+	&#60/script>
+	</textarea>
+	<button id="run" value = "run">Run</button>
+	<div id = "output"></div>
+ </div>
+ 
+ <h1>Svg:Path</h1>
+ <p></p>
+ <div id="greenPath">
+<img name = "images" src= "svgExamples/zigZag.png" style="width:200px; height:200px"/>
+</div>
+ <h2>HTML</h2>
+<div class="outerDiv"> 
+	<textarea rows="4" cols="50" id = "code2">
+  <svg height ="1100" width= "400">
+    <path id = "zig" stroke-width = "3" stroke= "black" fill="white" 
+	d = "M 100 100 h 100 v 100 h 100 v 100 h 100 v 100"/>
+  </svg>
+	</textarea>
+ </div>
+
+
+
+<h2>JavaScript and D3</h2>
+<div class = "outerDiv"> 
+	<textarea rows="4" cols="40" id = "code3">
+&#60script>
+	var pathDemo = d3.select("body");
+
+	pathDemo
+	  .append("svg")
+	  .attr("height", 1000)
+	  .attr("width", 400)
+	  .append("svg:path")
+	  .attr("id", "zig")
+	  .attr("d", "M 100 100 h 100 v 100 h 100 v 100 h 100 v 100")
+	  .attr("fill", "white")
+	  .attr("stroke","black")
+	  .attr("stroke-width", 3);
+&#60/script>
+	
+	</textarea>
+ </div>
+
 
 
   </section>
